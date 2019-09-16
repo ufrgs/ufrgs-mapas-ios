@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Brb-rF-80D">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding Controller-->
+        <scene sceneID="cVz-8B-yel">
+            <objects>
+                <viewController storyboardIdentifier="onboardingController" automaticallyAdjustsScrollViewInsets="NO" id="Brb-rF-80D" customClass="OnboardingController" customModule="ufrgsmapas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Njx-NK-MGi"/>
+                        <viewControllerLayoutGuide type="bottom" id="av6-F2-ywD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dxC-mE-fdu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2W-Ts-NKL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="560"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IyG-cI-zK1">
+                                <rect key="frame" x="168" y="594" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omR-kB-XNw">
+                                <rect key="frame" x="247" y="578" width="94" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="RightButton">
+                                    <color key="titleColor" white="0.55000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSI-EF-2rk">
+                                <rect key="frame" x="34" y="578" width="81" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="LeftButton">
+                                    <color key="titleColor" white="0.55000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m2W-Ts-NKL" firstAttribute="leading" secondItem="dxC-mE-fdu" secondAttribute="leading" id="34D-gy-8tb"/>
+                            <constraint firstItem="omR-kB-XNw" firstAttribute="bottom" secondItem="SSI-EF-2rk" secondAttribute="bottom" id="4um-sy-WbY"/>
+                            <constraint firstAttribute="trailing" secondItem="omR-kB-XNw" secondAttribute="trailing" constant="34" id="Gih-wK-zez"/>
+                            <constraint firstItem="omR-kB-XNw" firstAttribute="centerY" secondItem="IyG-cI-zK1" secondAttribute="centerY" id="KdC-4j-1mk"/>
+                            <constraint firstItem="SSI-EF-2rk" firstAttribute="centerY" secondItem="IyG-cI-zK1" secondAttribute="centerY" id="Ok3-jZ-h6w"/>
+                            <constraint firstItem="IyG-cI-zK1" firstAttribute="centerX" secondItem="dxC-mE-fdu" secondAttribute="centerX" id="WYQ-Sd-0Ba"/>
+                            <constraint firstItem="m2W-Ts-NKL" firstAttribute="top" secondItem="Njx-NK-MGi" secondAttribute="bottom" id="eLG-VV-n4M"/>
+                            <constraint firstAttribute="trailing" secondItem="m2W-Ts-NKL" secondAttribute="trailing" id="ejh-6j-6AA"/>
+                            <constraint firstItem="IyG-cI-zK1" firstAttribute="top" secondItem="m2W-Ts-NKL" secondAttribute="bottom" constant="14" id="gvL-TS-htf"/>
+                            <constraint firstItem="av6-F2-ywD" firstAttribute="top" secondItem="IyG-cI-zK1" secondAttribute="bottom" constant="36" id="mLp-T8-A6q"/>
+                            <constraint firstItem="SSI-EF-2rk" firstAttribute="leading" secondItem="dxC-mE-fdu" secondAttribute="leading" constant="34" id="mf4-6f-s6l"/>
+                            <constraint firstItem="av6-F2-ywD" firstAttribute="top" secondItem="SSI-EF-2rk" secondAttribute="bottom" constant="20" id="pJk-sl-eYr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftButton" destination="SSI-EF-2rk" id="cyv-FY-OEE"/>
+                        <outlet property="pageControl" destination="IyG-cI-zK1" id="4l2-BF-vik"/>
+                        <outlet property="rightButton" destination="omR-kB-XNw" id="VY6-Lz-jpu"/>
+                        <outlet property="scrollView" destination="m2W-Ts-NKL" id="yjX-lV-VOe"/>
+                        <segue destination="o04-2s-SEi" kind="presentation" identifier="showMainViewController" id="pTy-nU-JQU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhp-IS-Luq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="116"/>
+        </scene>
+        <!--mainViewController-->
+        <scene sceneID="kHl-F8-YgB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="mainViewController" id="o04-2s-SEi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ab0-48-APS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="115"/>
+        </scene>
+        <!--Onboarding Step Controller-->
+        <scene sceneID="P6v-ed-cAb">
+            <objects>
+                <viewController storyboardIdentifier="onboardingStepController" id="LdL-4d-DLx" customClass="OnboardingStepController" customModule="ufrgsmapas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cUr-F0-Vqb"/>
+                        <viewControllerLayoutGuide type="bottom" id="GKr-Ng-kem"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="alD-Gp-Tae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8l-fR-lqe">
+                                <rect key="frame" x="30" y="49" width="315" height="302.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-dD-bdd">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="200"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="LkL-6m-Gvf">
+                                        <rect key="frame" x="0.0" y="208" width="315" height="33"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="WPx-J0-U3x">
+                                        <rect key="frame" x="26" y="259" width="273" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BWo-dD-bdd" firstAttribute="leading" secondItem="D8l-fR-lqe" secondAttribute="leading" id="1JT-Gj-TUV"/>
+                                    <constraint firstItem="LkL-6m-Gvf" firstAttribute="trailing" secondItem="BWo-dD-bdd" secondAttribute="trailing" id="R8l-ML-dyW"/>
+                                    <constraint firstAttribute="trailing" secondItem="WPx-J0-U3x" secondAttribute="trailing" constant="16" id="dw7-bz-WKC"/>
+                                    <constraint firstItem="WPx-J0-U3x" firstAttribute="top" secondItem="LkL-6m-Gvf" secondAttribute="bottom" constant="18" id="gKe-gt-6kF"/>
+                                    <constraint firstItem="LkL-6m-Gvf" firstAttribute="leading" secondItem="BWo-dD-bdd" secondAttribute="leading" id="gZO-l3-Kyu"/>
+                                    <constraint firstAttribute="bottom" secondItem="WPx-J0-U3x" secondAttribute="bottom" constant="20" id="hJl-dL-L9I"/>
+                                    <constraint firstItem="LkL-6m-Gvf" firstAttribute="top" secondItem="BWo-dD-bdd" secondAttribute="bottom" constant="8" id="kLb-aA-ris"/>
+                                    <constraint firstAttribute="trailing" secondItem="BWo-dD-bdd" secondAttribute="trailing" id="kca-fz-3E3"/>
+                                    <constraint firstItem="BWo-dD-bdd" firstAttribute="top" secondItem="D8l-fR-lqe" secondAttribute="top" id="vQz-zs-8bV"/>
+                                    <constraint firstItem="WPx-J0-U3x" firstAttribute="leading" secondItem="D8l-fR-lqe" secondAttribute="leading" constant="26" id="wEf-IX-1y8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="D8l-fR-lqe" firstAttribute="leading" secondItem="alD-Gp-Tae" secondAttribute="leading" constant="30" id="5CP-TY-tTD"/>
+                            <constraint firstItem="D8l-fR-lqe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cUr-F0-Vqb" secondAttribute="bottom" constant="30" id="7Lt-pd-6Wu"/>
+                            <constraint firstItem="D8l-fR-lqe" firstAttribute="centerY" secondItem="alD-Gp-Tae" secondAttribute="centerY" id="dtJ-3m-MLV"/>
+                            <constraint firstAttribute="trailing" secondItem="D8l-fR-lqe" secondAttribute="trailing" constant="30" id="ew7-eS-TQF"/>
+                            <constraint firstItem="BWo-dD-bdd" firstAttribute="height" secondItem="alD-Gp-Tae" secondAttribute="height" multiplier="1/2" id="gTe-fm-egZ"/>
+                            <constraint firstItem="GKr-Ng-kem" firstAttribute="top" relation="greaterThanOrEqual" secondItem="D8l-fR-lqe" secondAttribute="bottom" constant="30" id="oKC-By-BGI"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="375" height="400"/>
+                    <connections>
+                        <outlet property="imageView" destination="BWo-dD-bdd" id="U6W-8s-TT9"/>
+                        <outlet property="infoLabel" destination="WPx-J0-U3x" id="YhW-is-xgs"/>
+                        <outlet property="titleLabel" destination="LkL-6m-Gvf" id="ACR-gF-CcY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0CN-fI-Fdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="136.73163418290855"/>
+        </scene>
+    </scenes>
+</document>
